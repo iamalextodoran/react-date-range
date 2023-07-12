@@ -1,10 +1,10 @@
 name: Demo - Build and Deploy
 on:
-    push:
-        tags:
-            - release/*
-    # Enable manual trigger
-    workflow_dispatch:
+  push:
+    tags:
+      - release/*
+  # Enable manual trigger
+  workflow_dispatch:
 jobs:
   demo-deploy:
     runs-on: ubuntu-latest

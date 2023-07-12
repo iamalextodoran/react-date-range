@@ -48,7 +48,7 @@ describe('DefinedRange tests', () => {
           },
         ]}
         renderStaticRangeLabel={renderStaticRangeLabel}
-      />
+      />,
     );
 
     expect(renderStaticRangeLabel).toHaveBeenCalledTimes(2);
@@ -61,7 +61,7 @@ describe('DefinedRange tests', () => {
     const renderBoldLabelContent = () => <b className={'bold-label-content'}>{'Bold Content'}</b>;
     const renderSomethingElse = () => <img className={'random-image'} />;
 
-    const renderStaticRangeLabel = function(staticRange) {
+    const renderStaticRangeLabel = function (staticRange) {
       let result;
 
       if (staticRange.id === 'italic') {
@@ -127,7 +127,7 @@ describe('DefinedRange tests', () => {
           },
         ]}
         renderStaticRangeLabel={renderStaticRangeLabel}
-      />
+      />,
     );
 
     expect(wrapper).toMatchSnapshot();

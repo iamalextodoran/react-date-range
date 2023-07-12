@@ -69,7 +69,7 @@ class DateRange extends Component {
       isWithinInterval(disabledDate, {
         start: startDate,
         end: endDate,
-      })
+      }),
     );
 
     if (inValidDatesWithinRange.length > 0) {
@@ -133,7 +133,7 @@ class DateRange extends Component {
           this.updatePreview(value ? this.calcNewSelection(value) : null);
         }}
         {...this.props}
-        displayMode="dateRange"
+        displayMode='dateRange'
         className={classnames(this.styles.dateRangeWrapper, this.props.className)}
         onChange={this.setSelection}
         updateRange={val => this.setSelection(val, false)}

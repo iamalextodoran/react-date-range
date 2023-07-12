@@ -194,7 +194,7 @@ class Calendar extends PureComponent {
       <div onMouseUp={e => e.stopPropagation()} className={styles.monthAndYearWrapper}>
         {showMonthArrow ? (
           <button
-            type="button"
+            type='button'
             className={classnames(styles.nextPrevButton, styles.prevButton)}
             onClick={() => changeShownDate(-1, 'monthOffset')}
             aria-label={ariaLabels.prevButton}>
@@ -241,7 +241,7 @@ class Calendar extends PureComponent {
         )}
         {showMonthArrow ? (
           <button
-            type="button"
+            type='button'
             className={classnames(styles.nextPrevButton, styles.nextButton)}
             onClick={() => changeShownDate(+1, 'monthOffset')}
             aria-label={ariaLabels.nextButton}>
@@ -435,7 +435,7 @@ class Calendar extends PureComponent {
             <div
               className={classnames(
                 this.styles.infiniteMonths,
-                isVertical ? this.styles.monthsVertical : this.styles.monthsHorizontal
+                isVertical ? this.styles.monthsVertical : this.styles.monthsHorizontal,
               )}
               onMouseLeave={() => onPreviewChange && onPreviewChange()}
               style={{
@@ -447,10 +447,10 @@ class Calendar extends PureComponent {
                 length={differenceInCalendarMonths(
                   endOfMonth(maxDate),
                   addDays(startOfMonth(minDate), -1),
-                  this.dateOptions
+                  this.dateOptions,
                 )}
                 treshold={500}
-                type="variable"
+                type='variable'
                 ref={target => (this.list = target)}
                 itemSizeEstimator={this.estimateMonthSize}
                 axis={isVertical ? 'y' : 'x'}
@@ -490,10 +490,10 @@ class Calendar extends PureComponent {
           <div
             className={classnames(
               this.styles.months,
-              isVertical ? this.styles.monthsVertical : this.styles.monthsHorizontal
+              isVertical ? this.styles.monthsVertical : this.styles.monthsHorizontal,
             )}>
             {new Array(this.props.months).fill(null).map((_, i) => {
-              let monthStep = addMonths(this.state.focusedDate, i);;
+              let monthStep = addMonths(this.state.focusedDate, i);
               if (this.props.calendarFocus === 'backwards') {
                 monthStep = subMonths(this.state.focusedDate, this.props.months - 1 - i);
               }

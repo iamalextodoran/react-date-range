@@ -73,7 +73,7 @@ describe('DateRange', () => {
         {...commonProps}
         ranges={[{ ...commonProps.ranges[0], endDate: null }]}
         retainEndDateOnFirstSelection
-      />
+      />,
     );
     const methodResult = instance.calcNewSelection(subDays(endDate, 10), true);
     compareRanges(methodResult.range, {

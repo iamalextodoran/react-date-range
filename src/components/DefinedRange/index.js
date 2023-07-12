@@ -73,7 +73,7 @@ class DefinedRange extends Component {
 
             return (
               <button
-                type="button"
+                type='button'
                 className={cx(styles.staticRange, {
                   [styles.staticRangeSelected]: Boolean(selectedRange),
                 })}

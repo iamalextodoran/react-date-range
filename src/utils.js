@@ -43,7 +43,7 @@ export function calcFocusDate(currentFocusedDate, props) {
 
 export function findNextRangeIndex(ranges, currentRangeIndex = -1) {
   const nextIndex = ranges.findIndex(
-    (range, i) => i > currentRangeIndex && range.autoFocus !== false && !range.disabled
+    (range, i) => i > currentRangeIndex && range.autoFocus !== false && !range.disabled,
   );
   if (nextIndex !== -1) return nextIndex;
   return ranges.findIndex(range => range.autoFocus !== false && !range.disabled);

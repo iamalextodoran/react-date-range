@@ -42,7 +42,7 @@ class Month extends PureComponent {
     const monthDisplay = getMonthDisplayRange(
       this.props.month,
       this.props.dateOptions,
-      this.props.fixedHeight
+      this.props.fixedHeight,
     );
     let ranges = this.props.ranges;
     if (displayMode === 'dateRange' && drag.status) {
@@ -74,7 +74,7 @@ class Month extends PureComponent {
               const isOutsideMinMax =
                 (minDate && isBefore(day, minDate)) || (maxDate && isAfter(day, maxDate));
               const isDisabledSpecifically = disabledDates.some(disabledDate =>
-                isSameDay(disabledDate, day)
+                isSameDay(disabledDate, day),
               );
               const isDisabledDay = disabledDay(day);
               return (
@@ -105,7 +105,7 @@ class Month extends PureComponent {
                   drag={drag.status}
                 />
               );
-            }
+            },
           )}
         </div>
       </div>

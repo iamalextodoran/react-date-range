@@ -15,12 +15,12 @@ describe('InputRangeField tests', () => {
     const onChange = jest.fn();
     const wrapper = mount(
       <InputRangeField
-        label="Input label"
+        label='Input label'
         styles={styles}
         onChange={onChange}
         onFocus={jest.fn()}
         onBlur={jest.fn()}
-      />
+      />,
     );
 
     wrapper.find('input').simulate('change', toChangeEvent('3'));
@@ -44,13 +44,13 @@ describe('InputRangeField tests', () => {
     const wrapper = mount(
       <InputRangeField
         value={12}
-        placeholder="Placeholder"
-        label="Input label"
+        placeholder='Placeholder'
+        label='Input label'
         styles={styles}
         onChange={jest.fn()}
         onFocus={jest.fn()}
         onBlur={jest.fn()}
-      />
+      />,
     );
 
     expect(wrapper.find(`.${styles.inputRangeInput}`).prop('value')).toEqual(12);
@@ -74,17 +74,17 @@ describe('InputRangeField tests', () => {
   });
 
   test('Should render the label as a Component', () => {
-    const Label = () => <span className="input-range-field-label">Input label</span>;
+    const Label = () => <span className='input-range-field-label'>Input label</span>;
     const wrapper = mount(
       <InputRangeField
         value={12}
-        placeholder="Placeholder"
+        placeholder='Placeholder'
         label={<Label />}
         styles={styles}
         onChange={jest.fn()}
         onFocus={jest.fn()}
         onBlur={jest.fn()}
-      />
+      />,
     );
 
     expect(wrapper.find(`.${styles.inputRangeInput}`).prop('value')).toEqual(12);
